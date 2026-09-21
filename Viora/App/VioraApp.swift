@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct VioraApp: App {
+struct StareliApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
