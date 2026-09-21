@@ -15,11 +15,9 @@ struct SpacesView: View {
                         SpaceDetailView(space: space)
                     } label: {
                         Label {
-                            Text(space.name)
-                                .font(.title3.weight(.semibold))
+                            Text(space.name).font(.title3.weight(.semibold))
                         } icon: {
-                            Image(systemName: space.symbolName)
-                                .accessibilityHidden(true)
+                            Image(systemName: space.symbolName).accessibilityHidden(true)
                         }
                         .frame(minHeight: 52)
                     }
@@ -32,7 +30,7 @@ struct SpacesView: View {
             } header: {
                 Text("Your spaces")
             } footer: {
-                Text("Spaces help Viora remember the visual context that matters to you.")
+                Text("Spaces help Stareli remember the visual context that matters to you.")
             }
         }
         .navigationTitle("Spaces")
@@ -89,9 +87,9 @@ private struct SpaceDetailView: View {
         ContentUnavailableView {
             Label(space.name, systemImage: space.symbolName)
         } description: {
-            Text("Viora will remember visual information and conversations saved in this space.")
+            Text("Stareli will remember visual information and conversations saved in this space.")
         } actions: {
-            NavigationLink("Ask Viora") { AskVioraView() }
+            NavigationLink("Ask Stareli") { AskVioraView() }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
         }
